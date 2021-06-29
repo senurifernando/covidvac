@@ -11,7 +11,7 @@
 
 <body class="bg-gray-300">
 
-    <nav class="p-6 bg-white flex justify-between mb-6">
+    <nav class="p-6 bg-white flex justify-between mb-0">
         <ul class="flex items-center">
             <li>
                 <a href="" class="p-3">Home</a>

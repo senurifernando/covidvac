@@ -17,4 +17,9 @@ class DashboardController extends Controller
     {
         return view('layouts.vaccines');
     }
+
+    public function guidelines()
+    {
+        return view('layouts.guidelines');
+    }
 }

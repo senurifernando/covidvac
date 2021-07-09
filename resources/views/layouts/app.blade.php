@@ -17,7 +17,7 @@
                 <a href="{{ route('welcome') }}" class="p-3">Home</a>
             </li>
             <li>
-                <a href="" class="p-3">General Guidelines</a>
+                <a href="{{ route('guidelines') }}" class="p-3">General Guidelines</a>
             </li>
             <li>
                 <a href="{{ route('vaccines') }}" class="p-3">Vaccines</a>

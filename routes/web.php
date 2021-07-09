@@ -21,3 +21,5 @@ use App\Http\Controllers\DashboardController;
 Route::get('/', [DashboardController::class, 'index'])->name('welcome');
 
 Route::get('/vaccines', [DashboardController::class, 'vaccines'])->name('vaccines');
+
+Route::get('/guidelines', [DashboardController::class, 'guidelines'])->name('guidelines');

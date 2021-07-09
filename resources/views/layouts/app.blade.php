@@ -46,6 +46,7 @@
         </ul>
     </nav>
     </nav>
+    <footer class="fixed h-8 bg-gray-500 w-full bottom-0 flex items-center justify-center"></footer>
     @yield('content')
 </body>
 

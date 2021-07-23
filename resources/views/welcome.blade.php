@@ -1,11 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="flex justify-center w-full py-20 px-6 bg-cover bg-no-repeat bg-center relative z-10 h-64 bg-origin-border"
-        style=" background-image: url('https://image.freepik.com/free-vector/cartoon-coronavirus-vaccine-background_23-2148860780.jpg');">
-        <div class="flex justify-center transparent p-6 rounded-lg">
+    <!--<div class="flex justify-center w-full py-20 px-6 bg-cover bg-no-repeat bg-center relative z-10 h-64 bg-origin-border"
+                            style=" background-image: url('https://image.freepik.com/free-vector/cartoon-coronavirus-vaccine-background_23-2148860780.jpg');">
+                            <div class="flex justify-center transparent p-6 rounded-lg">
 
-        </div>
+                            </div>
+                        </div>-->
+    <div class="flex justify-center">
+        <img class="img-team" src="{{ URL('images/cartoon-coronavirus.jpg') }}">
     </div>
 
     <div class="p-9">

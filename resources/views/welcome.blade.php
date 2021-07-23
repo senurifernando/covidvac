@@ -11,7 +11,7 @@
     <div class="p-9">
         <div>
             <h1 class="text-4xl"> Why Covid 19 Vaccination is IMPORTANT?</h1>
-            <ul class="p-4 text-lg">
+            <ul class="p-4 text-lg list-disc">
                 <li class="p-2">COVID 19-vaccines are effective. They can keep you from getting and spreading the virus that
                     causes
                     COVID-19. </li>

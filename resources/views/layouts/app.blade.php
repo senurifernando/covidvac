@@ -46,7 +46,8 @@
         </ul>
     </nav>
     </nav>
-    <footer class="fixed h-8 bg-gray-500 w-full bottom-0 flex items-center justify-center"></footer>
+    <footer class="fixed h-8 bg-gray-500 w-full bottom-0 flex items-center justify-center"> Laravel Group Project
+    </footer>
     @yield('content')
 </body>
 

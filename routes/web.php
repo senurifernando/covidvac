@@ -27,7 +27,7 @@ Route::get('/vaccines', [DashboardController::class, 'vaccines'])->name('vaccine
 Route::get('/guidelines', [DashboardController::class, 'guidelines'])->name('guidelines');
 
 Route::get('/login', [LoginController::class, 'index'])->name('login');
-
+Route::post('/login', [LoginController::class, 'store']);
 
 Route::get('/register', [RegisterController::class, 'index'])->name('register');
 Route::post('/register', [RegisterController::class, 'store']);

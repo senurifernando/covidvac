@@ -47,7 +47,7 @@
 
             @auth
                 <li>
-                    <a href="" class="p-6">LOGOUT</a>
+                    <a href="{{ route('logout') }}" class="p-6">LOGOUT</a>
                 </li>
             @endauth
         </ul>

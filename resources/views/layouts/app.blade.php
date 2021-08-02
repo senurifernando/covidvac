@@ -22,6 +22,11 @@
             <li>
                 <a href="{{ route('vaccines') }}" class="p-3">Vaccines</a>
             </li>
+            @auth
+                <li>
+                    <a href="" class="p-3">Take Appointment</a>
+                </li>
+            @endauth
         </ul>
 
         <ul class="flex items-center">

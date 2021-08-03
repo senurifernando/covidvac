@@ -5,6 +5,8 @@ use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\Auth\RegisterController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\Auth\AdminController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -22,7 +24,7 @@ use App\Http\Controllers\DashboardController;
 });*/
 
 Route::get('/', [DashboardController::class, 'index'])->name('welcome');
-
+Route::get('/admin', [AdminController::class, 'index'])->name('admin');
 Route::get('/vaccines', [DashboardController::class, 'vaccines'])->name('vaccines');
 
 Route::get('/guidelines', [DashboardController::class, 'guidelines'])->name('guidelines');

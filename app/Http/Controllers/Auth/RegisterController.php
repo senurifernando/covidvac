@@ -25,6 +25,7 @@ class RegisterController extends Controller
         ]);
 
         User::create([
+
             'name' => $request->name,
             'NIC' => $request->NIC,
             'address' => $request->address,
@@ -32,7 +33,8 @@ class RegisterController extends Controller
             'password' => Hash::make($request->password),
         ]);
         // auth()->attempt($request->only('email', 'password'));
-
+        //$user->attachRole('user');
+        //return ($user)->route('login');
         return redirect()->route('login');
     }
 }

@@ -1,24 +1,86 @@
 @extends('layouts.app')
 
 @section('content')
-    <!--<div class="flex justify-center w-full py-20 px-6 bg-cover bg-no-repeat bg-center relative z-10 h-64 bg-origin-border"
+<!--<div class="flex justify-center w-full py-20 px-6 bg-cover bg-no-repeat bg-center relative z-10 h-64 bg-origin-border"
                             style=" background-image: url('https://image.freepik.com/free-vector/cartoon-coronavirus-vaccine-background_23-2148860780.jpg');">
                             <div class="flex justify-center transparent p-6 rounded-lg">
 
                             </div>
                         </div>-->
-    <div class="flex justify-center">
-        <img class="img-team" src="{{ URL('images/cartoon-coronavirus.jpg') }}">
+
+
+<style>
+
+</style>
+
+</head>
+
+<body class="bg-white font-sans leading-normal tracking-normal">
+
+    <div class="carousel relative shadow-2xl bg-white">
+        <div class="carousel-inner relative overflow-hidden w-full">
+            <!--Slide 1-->
+            <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden=""
+                checked="checked">
+            <div class="carousel-item absolute opacity-0" style="height:60vh;">
+                <img class="img-team" src="{{ URL('images/covid1.jpg') }}">
+            </div>
+            <label for="carousel-3"
+                class="prev control-1 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+            <label for="carousel-2"
+                class="next control-1 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+
+            <!--Slide 2-->
+            <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
+            <div class="carousel-item absolute opacity-0" style="height:60vh;">
+                <img class="img-team" src="{{ URL('images/covid2.png') }}">
+            </div>
+            <label for="carousel-1"
+                class="prev control-2 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+            <label for="carousel-3"
+                class="next control-2 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+
+            <!--Slide 3-->
+            <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
+            <div class="carousel-item absolute opacity-0" style="height:60vh;">
+                <img class="img-team" src="{{ URL('images/covid3.png') }}">
+            </div>
+            <label for="carousel-2"
+                class="prev control-3 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+            <label for="carousel-1"
+                class="next control-3 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+
+            <!-- Add additional indicators for each slide-->
+            <ol class="carousel-indicators">
+                <li class="inline-block mr-3">
+                    <label for="carousel-1"
+                        class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
+                </li>
+                <li class="inline-block mr-3">
+                    <label for="carousel-2"
+                        class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
+                </li>
+                <li class="inline-block mr-3">
+                    <label for="carousel-3"
+                        class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
+                </li>
+            </ol>
+
+        </div>
     </div>
+
+
 
     <div class="p-9">
         <div>
             <h1 class="text-4xl"> Why Covid 19 Vaccination is IMPORTANT?</h1>
             <ul class="p-4 text-lg list-disc">
-                <li class="p-2">COVID 19-vaccines are effective. They can keep you from getting and spreading the virus that
+                <li class="p-2">COVID 19-vaccines are effective. They can keep you from getting and spreading the virus
+                    that
                     causes
                     COVID-19. </li>
-                <li class="p-2">COVID-19 vaccines also help keep you from getting seriously ill even if you do get COVID-19.
+                <li class="p-2">COVID-19 vaccines also help keep you from getting seriously ill even if you do get
+                    COVID-19.
                 </li>
                 <li class="p-2">After you are fully vaccinated, you can resume many activites that you did before the
                     pandemic</li>
@@ -26,4 +88,4 @@
         </div>
 
     </div>
-@endsection
+    @endsection

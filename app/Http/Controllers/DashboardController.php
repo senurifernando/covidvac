@@ -22,4 +22,8 @@ class DashboardController extends Controller
     {
         return view('layouts.guidelines');
     }
+    public function takeAppointment()
+    {
+        return view('layouts.takeAppointment');
+    }
 }

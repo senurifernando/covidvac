@@ -26,6 +26,7 @@ use App\Http\Controllers\Auth\AdminController;
 Route::get('/', [DashboardController::class, 'index'])->name('welcome');
 Route::get('/admin', [AdminController::class, 'index'])->name('admin');
 Route::get('/vaccines', [DashboardController::class, 'vaccines'])->name('vaccines');
+Route::get('/takeAppointment', [DashboardController::class, 'takeAppointment'])->name('takeAppointment');
 
 Route::get('/guidelines', [DashboardController::class, 'guidelines'])->name('guidelines');
 

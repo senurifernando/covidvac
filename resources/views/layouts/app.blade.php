@@ -23,9 +23,9 @@
                 <a href="{{ route('vaccines') }}" class="p-3">Vaccines</a>
             </li>
             @auth
-                <li>
-                    <a href="" class="p-3">Take Appointment</a>
-                </li>
+            <li>
+                <a href="{{ route('takeAppointment') }}" class="p-3">Take Appointment</a>
+            </li>
             @endauth
         </ul>
 
@@ -41,6 +41,7 @@
 
 
             @guest
+<<<<<<< HEAD
                 <li>
 
                     <a href="{{ route('loginpermission') }}" class="p-6">Login</a>
@@ -49,13 +50,21 @@
                 <li>
                     <a href="{{ route('register') }}" class="p-6">Register</a>
                 </li>
+=======
+            <li>
+                <a href="{{ route('login') }}" class="p-6">Login</a>
+            </li>
+            <li>
+                <a href="{{ route('register') }}" class="p-6">Register</a>
+            </li>
+>>>>>>> 12dbbf2658dc5772024f5d145e57d2d3c594d0b9
 
             @endguest
 
             @auth
-                <li>
-                    <a href="{{ route('logout') }}" class="p-6">LOGOUT</a>
-                </li>
+            <li>
+                <a href="{{ route('logout') }}" class="p-6">LOGOUT</a>
+            </li>
             @endauth
         </ul>
     </nav>

@@ -23,11 +23,11 @@
 
             <ul class="list-disc list-inside">
                 <img src="{{ URL('images/vac.jpeg') }}" alt="" class="rounded">
-                <li>Name: Moderna</li>
-                <li>Manufacturar: ModernaTX, Inc</li>
-                <li>No of Doses: 2 doses, 28 days apart</li>
-                <li>Efficacy: 94.1%</li>
-                <li>Recommended for: 12 years of age and older</li>
+                <li>Name: Sinovac</li>
+                <li>Manufacturar: China National Pharmaceutical group</li>
+                <li>No of Doses: 2 doses, 14 days apart</li>
+                <li>Efficacy: 51%</li>
+                <li>Recommended for: Aged 18 and above</li>
             </ul>
         </div>
 

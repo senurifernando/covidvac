@@ -42,7 +42,9 @@
 
             @guest
                 <li>
-                    <a href="{{ route('login') }}" class="p-6">Login</a>
+
+                    <a href="{{ route('loginpermission') }}" class="p-6">Login</a>
+
                 </li>
                 <li>
                     <a href="{{ route('register') }}" class="p-6">Register</a>

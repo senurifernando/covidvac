@@ -13,6 +13,10 @@ class LoginController extends Controller
     {
         return view('auth.login');
     }
+    public function permission()
+    {
+        return view('layouts.loginpermission');
+    }
     public function store(Request $request)
     {
         $credentials = $request->validate([

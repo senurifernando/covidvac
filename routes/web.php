@@ -30,6 +30,7 @@ Route::get('/vaccines', [DashboardController::class, 'vaccines'])->name('vaccine
 Route::get('/guidelines', [DashboardController::class, 'guidelines'])->name('guidelines');
 
 Route::get('/login', [LoginController::class, 'index'])->name('login');
+Route::get('/loginpermission', [LoginController::class, 'permission'])->name('loginpermission');
 Route::post('/login', [LoginController::class, 'store']);
 
 Route::get('/logout', [LogoutController::class, 'logout'])->name('logout');

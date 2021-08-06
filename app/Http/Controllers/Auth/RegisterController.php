@@ -74,4 +74,8 @@ class RegisterController extends Controller
         ]);
         return redirect()->route('adminlogin');
     }
+    public function registerpermission()
+    {
+        return view('layouts.registerpermission');
+    }
 }

@@ -40,6 +40,6 @@ Route::get('/logout', [LogoutController::class, 'logout'])->name('logout');
 
 Route::get('/register', [RegisterController::class, 'index'])->name('register');
 Route::post('/register', [RegisterController::class, 'store']);
-
+Route::get('/registerpermission', [RegisterController::class, 'registerpermission'])->name('registerpermission');
 Route::get('/adminregister', [RegisterController::class, 'showAdminRegisterForm'])->name('adminregister');
 Route::post('/adminregister', [RegisterController::class, 'createAdmin']);

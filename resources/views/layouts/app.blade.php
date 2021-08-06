@@ -47,7 +47,7 @@
 
                 </li>
                 <li>
-                    <a href="{{ route('register') }}" class="p-6">Register</a>
+                    <a href="{{ route('registerpermission') }}" class="p-6">Register</a>
                 </li>
 
 

@@ -39,19 +39,26 @@ class LoginController extends Controller
     }
     public function showAdminLoginForm()
     {
-        return view('auth.login', ['url' => 'admin']);
+        return view('auth.adminlogin');
     }
-    public function adminLogin(Request $request)
+    public function adminlogin(Request $request)
     {
         $credentials = $this->validate($request, [
             'email'   => 'required|email',
             'password' => 'required|min:6'
         ]);
 
-        if (Auth::attempt($credentials(['email' => $request->email, 'password' => $request->password], $request->get('remember')))) {
+        if (Auth::guard('admin')->attempt($credentials)) {
+            $request->session()->regenerate();
 
-            return redirect()->intended('/admin');
+            return redirect()->route('admin');
         }
-        return back()->withInput($request->only('email', 'remember'));
+
+        // if (Auth::guard('admin')->attempt($credentials(['email' => $request->email, 'password' => $request->password], $request->get('remember')))) {
+
+        return back()->withErrors([
+            'email' => 'The provided credentials do not match our records.',
+        ]);
     }
+    // return back()->withInput($request->only('email', 'remember'));
 }

@@ -33,8 +33,13 @@ Route::get('/guidelines', [DashboardController::class, 'guidelines'])->name('gui
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::get('/loginpermission', [LoginController::class, 'permission'])->name('loginpermission');
 Route::post('/login', [LoginController::class, 'store']);
+Route::get('/adminlogin', [LoginController::class, 'showAdminLoginForm'])->name('adminlogin');
+Route::post('/adminlogin', [LoginController::class, 'adminlogin']);
 
 Route::get('/logout', [LogoutController::class, 'logout'])->name('logout');
 
 Route::get('/register', [RegisterController::class, 'index'])->name('register');
 Route::post('/register', [RegisterController::class, 'store']);
+
+Route::get('/adminregister', [RegisterController::class, 'showAdminRegisterForm'])->name('adminregister');
+Route::post('/adminregister', [RegisterController::class, 'createAdmin']);

@@ -8,6 +8,8 @@ use App\Models\User;
 use App\Models\Admin;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Contracts\Validation\Validator;
+use Illuminate\Foundation\Validation\ValidatesRequests;
 
 class RegisterController extends Controller
 {
@@ -47,13 +49,14 @@ class RegisterController extends Controller
     }
     public function showAdminRegisterForm()
     {
-        return view('auth.register', ['url' => 'admin']);
+        return view('auth.adminregister');
+        //return view('auth.adminregister', ['url' => 'admin']);
     }
-    protected function createAdmin(Request $request)
+    public function createAdmin(Request $request)
     {
         $this->validate($request, [
             'name' => 'required|max:255',
-            //'NIC' => 'required |max:255',
+            'WorkID' => 'required |max:255',
             // 'address' => 'required|max:255',
             'email' => 'required|email |max:255',
             'password' => 'required|confirmed',
@@ -61,13 +64,14 @@ class RegisterController extends Controller
             'district' => 'required|max255',
         ]);
         //$this->validator($request->all())->validate();
-        Admin::create([
+        $admin = Admin::create([
             'name' => $request->name,
+            'WorkID' => $request->WorkID,
             'email' => $request->email,
             'password' => Hash::make($request->password),
             'province' => $request->province,
             'district' => $request->district,
         ]);
-        return redirect()->intended('login/admin');
+        return redirect()->route('adminlogin');
     }
 }

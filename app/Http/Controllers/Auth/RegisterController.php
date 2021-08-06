@@ -60,8 +60,8 @@ class RegisterController extends Controller
             // 'address' => 'required|max:255',
             'email' => 'required|email |max:255',
             'password' => 'required|confirmed',
-            'province' => 'required|max255',
-            'district' => 'required|max255',
+            'province' => 'required|max:255',
+            'district' => 'required|max:255',
         ]);
         //$this->validator($request->all())->validate();
         $admin = Admin::create([

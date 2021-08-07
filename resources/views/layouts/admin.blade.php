@@ -25,9 +25,54 @@
                 </div>
             </div>
         </header>
-        <li>
-            <a href="{{ route('logout') }}" class="p-6">LOGOUT</a>
-        </li>
+        <!-- Mobile Header & Nav -->
+        <header x-data="{ isOpen: false }" class="w-full bg-sidebar py-5 px-6 sm:hidden">
+            <div class="flex items-center justify-between">
+                <a href="{{ route('admin') }}"
+                    class="text-black text-3xl font-semibold uppercase hover:text-gray-300">Admin</a>
+                <button @click="isOpen = !isOpen" class="text-black text-3xl focus:outline-none">
+                    <i x-show="!isOpen" class="fas fa-bars"></i>
+                    <i x-show="isOpen" class="fas fa-times"></i>
+                </button>
+            </div>
+        </header>
+        <div>
+            <table class="min-w-full bg-white">
+                <thead class="bg-gray-800 text-white">
+                    <tr>
+                        <th class="w-1/8 text-left py-3 px-6 uppercase font-semibold text-sm">NIC</th>
+                        <th class="w-1/8 text-left py-3 px-4 uppercase font-semibold text-sm">Province</th>
+                        <th class="w-1/8 text-left py-3 px-6 uppercase font-semibold text-sm">District</th>
+                        <th class="text-left py-3 px-5 uppercase font-semibold text-sm">Phone</th>
+                        <th class="text-left py-3 px-5 uppercase font-semibold text-sm">Email</th>
+                        <th class="text-left py-3 px-5 uppercase font-semibold text-sm">Actions</th>
+                    </tr>
+                </thead>
+                <tbody class="text-black-700">
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <ul class="list-inline m-0">
+
+                                <li class="list-inline-item">
+                                    <button class="btn btn-success btn-sm rounded-0" type="button" data-toggle="tooltip"
+                                        data-placement="top" title="Edit"><i class="fa fa-edit"></i></button>
+                                </li>
+                                <li class="list-inline-item">
+                                    <button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="tooltip"
+                                        data-placement="top" title="Delete"><i class="fa fa-trash"></i></button>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
     </div>
     <!-- AlpineJS -->
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>

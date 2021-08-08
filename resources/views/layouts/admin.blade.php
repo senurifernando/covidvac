@@ -50,11 +50,11 @@
                 </thead>
                 <tbody class="text-black-700">
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>976560094v</td>
+                        <td>Western</td>
+                        <td>Colombo</td>
+                        <td>0784636261</td>
+                        <td>senu@gmail.com</td>
                         <td>
                             <ul class="list-inline m-0">
 

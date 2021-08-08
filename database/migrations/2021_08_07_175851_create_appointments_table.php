@@ -29,7 +29,13 @@ class CreateAppointmentsTable extends Migration
             $table->timestamps();
             $table->rememberToken();
         });
+
+        Schema::table('appointments', function (Blueprint $table) {
+            $table->unsignedBigInteger('NIC');
+            $table->foreign('NIC')->references('NIC')->on('users');
+        });
     }
+
 
     /**
      * Reverse the migrations.

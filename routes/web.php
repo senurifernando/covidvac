@@ -28,6 +28,8 @@ Route::get('/admin', [AdminController::class, 'index'])->name('admin');
 Route::get('/vaccines', [DashboardController::class, 'vaccines'])->name('vaccines');
 Route::get('/takeAppointment', [DashboardController::class, 'takeAppointment'])->name('takeAppointment');
 
+Route::get('/appointmentForm', [DashboardController::class, 'showAppointement'])->name('appointmentForm');
+
 Route::get('/guidelines', [DashboardController::class, 'guidelines'])->name('guidelines');
 
 Route::get('/login', [LoginController::class, 'index'])->name('login');

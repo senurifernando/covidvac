@@ -26,4 +26,8 @@ class DashboardController extends Controller
     {
         return view('layouts.takeAppointment');
     }
+    public function showAppointement()
+    {
+        return view('layouts.appointmentForm');
+    }
 }

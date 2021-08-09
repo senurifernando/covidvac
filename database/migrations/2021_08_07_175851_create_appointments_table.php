@@ -24,17 +24,17 @@ class CreateAppointmentsTable extends Migration
             $table->timeTz('time', $precision = 0); //admin
             $table->string('location'); //admin
             $table->string('dosenum');
-            $table->integer('phone', 10);
+            $table->string('phone', 10);
             $table->string('email', 100)->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->timestamps();
             $table->rememberToken();
         });
 
-        Schema::table('appointments', function (Blueprint $table) {
-            $table->string('NIC');
-            $table->foreign('NIC')->references('NIC')->on('users');
-        });
+        /* Schema::table('appointments', function (Blueprint $table) {
+            $table->unsignedBigInteger('nic');
+            $table->foreign('nic')->references('NIC')->on('users');
+        });*/
     }
 
 

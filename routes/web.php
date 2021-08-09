@@ -6,6 +6,7 @@ use App\Http\Controllers\Auth\RegisterController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\Auth\AdminController;
+use App\Http\Controllers\AppointmentController;
 
 
 /*
@@ -28,7 +29,8 @@ Route::get('/admin', [AdminController::class, 'index'])->name('admin');
 Route::get('/vaccines', [DashboardController::class, 'vaccines'])->name('vaccines');
 Route::get('/takeAppointment', [DashboardController::class, 'takeAppointment'])->name('takeAppointment');
 
-Route::get('/appointmentForm', [DashboardController::class, 'showAppointement'])->name('appointmentForm');
+Route::get('/appointmentForm', [AppointmentController::class, 'showAppointement'])->name('appointmentForm');
+Route::post('/appointmentForm', [AppointmentController::class, 'store']);
 
 Route::get('/guidelines', [DashboardController::class, 'guidelines'])->name('guidelines');
 

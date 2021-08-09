@@ -61,8 +61,7 @@
                                 <li class="list-inline-item">
                                     <button class="btn btn-success btn-sm rounded-0" type="button" data-toggle="tooltip"
                                         data-placement="top" title="Edit"><i class="fa fa-edit"></i></button>
-                                </li>
-                                <li class="list-inline-item">
+
                                     <button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="tooltip"
                                         data-placement="top" title="Delete"><i class="fa fa-trash"></i></button>
                                 </li>

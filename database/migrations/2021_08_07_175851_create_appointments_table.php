@@ -20,9 +20,9 @@ class CreateAppointmentsTable extends Migration
             $table->string('province');
             $table->string('district');
             $table->string('injection_name');
-            $table->date('date'); //admin
-            $table->timeTz('time', $precision = 0); //admin
-            $table->string('location'); //admin
+            //$table->date('date'); //admin
+            //$table->timeTz('time', $precision = 0); //admin
+            //$table->string('location'); //admin
             $table->string('dosenum');
             $table->string('phone', 10);
             $table->string('email', 100)->unique();

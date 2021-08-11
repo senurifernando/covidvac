@@ -15,4 +15,8 @@ class AdminController extends Controller
         );
         return view('layouts.admin', $data);
     }
+    public function createAppointment()
+    {
+        return view('layouts.createAppointment');
+    }
 }

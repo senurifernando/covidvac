@@ -63,9 +63,10 @@
                             <td>{{ $item->email }}</td>
                             <td>
                                 <div>
+                                    <!-- date, time and location is being given by the following form -->
                                     <button
                                         class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full">
-                                        <a href="#"> Create appointment</a>
+                                        <a href="{{ route('createAppointment') }}"> Create appointment</a>
                                     </button>
 
                                     <button

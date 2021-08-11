@@ -20,7 +20,7 @@
                     class="h-full w-full fixed inset-0 cursor-default"></button>
                 <div x-show="isOpen" class="absolute w-32 bg-white rounded-lg shadow-lg py-2 mt-16">
                     <a href="#" class="block px-4 py-2 account-link hover:text-white">Account</a>
-                    <a href="#" class="block px-4 py-2 account-link hover:text-white">Support</a>
+
                     <a href="{{ route('logout') }}" class="block px-4 py-2 account-link hover:text-white">Sign Out</a>
                 </div>
             </div>
@@ -40,6 +40,7 @@
             <table class="min-w-full bg-white">
                 <thead class="bg-gray-800 text-white">
                     <tr>
+                        <th class="w-1/8 text-left py-3 px-6 uppercase font-semibold text-sm">Name</th>
                         <th class="w-1/8 text-left py-3 px-6 uppercase font-semibold text-sm">NIC</th>
                         <th class="w-1/8 text-left py-3 px-4 uppercase font-semibold text-sm">Province</th>
                         <th class="w-1/8 text-left py-3 px-6 uppercase font-semibold text-sm">District</th>
@@ -49,26 +50,45 @@
                     </tr>
                 </thead>
                 <tbody class="text-black-700">
-                    <tr>
-                        <td>976560094v</td>
-                        <td>Western</td>
-                        <td>Colombo</td>
-                        <td>0784636261</td>
-                        <td>senu@gmail.com</td>
-                        <td>
-                            <ul class="list-inline m-0">
+                    <!--retrieve data from the database -->
+                    @foreach ($list as $item)
 
-                                <li class="list-inline-item">
-                                    <button class="btn btn-success btn-sm rounded-0" type="button" data-toggle="tooltip"
-                                        data-placement="top" title="Edit"><i class="fa fa-edit"></i></button>
-                                </li>
-                                <li class="list-inline-item">
-                                    <button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="tooltip"
-                                        data-placement="top" title="Delete"><i class="fa fa-trash"></i></button>
-                                </li>
-                            </ul>
-                        </td>
-                    </tr>
+
+                        <tr>
+                            <td>{{ $item->name }}</td>
+                            <td>{{ $item->NIC }}</td>
+                            <td>{{ $item->province }}</td>
+                            <td>{{ $item->district }}</td>
+                            <td>{{ $item->phone }}</td>
+                            <td>{{ $item->email }}</td>
+                            <td>
+                                <div>
+                                    <button
+                                        class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full">
+                                        <a href="#"> Create appointment</a>
+                                    </button>
+
+                                    <button
+                                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+                                        Edit
+                                    </button>
+                                    <!-- <button class="btn btn-success btn-sm rounded-0" type="button"
+                                            data-toggle="tooltip" data-placement="top" title="Edit"><i
+                                                class="fa fa-edit"></i></button>-->
+
+
+                                    <button
+                                        class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full">
+                                        Delete
+                                    </button>
+                                    <!-- <button class="btn btn-danger btn-sm rounded-0" type="button"
+                                            data-toggle="tooltip" data-placement="top" title="Delete"><i
+                                                class="fa fa-trash"></i></button>-->
+
+                                </div>
+                            </td>
+                        </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>

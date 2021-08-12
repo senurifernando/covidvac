@@ -32,8 +32,8 @@ class AdminController extends Controller
     public function sendAppointment(Request $request)
     {
         $this->validate($request, [
-            'date' => 'required|date',
-            'time' => 'required|time',
+            'date' => 'required',
+            'time' => 'required',
             'location' => 'required|max:255',
         ]);
 

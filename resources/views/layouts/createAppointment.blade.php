@@ -15,6 +15,7 @@
     <div class="flex justify-center ">
         <div class="w-3/12 bg-white p-6 rounded-lg m-5 shadow-2xl">
             <form action="{{ route('createAppointment') }}" method="POST">
+                @csrf
                 <h2 class="text-4xl font-normal leading-normal mt-0 mb-2 text-pink-800">Create Appointment</h2>
                 <div class=" md:flex md:items-center mb-6">
                     <label class=" px-6 uppercase font-semibold text-sm">Date :</label>

@@ -9,6 +9,7 @@ use Illuminate\Notifications\Notifiable;
 class Appointment extends Model
 {
     use HasFactory, Notifiable;
+    //protected $primaryKey = 'id';
     protected $fillable = [
         'name',
         'NIC',

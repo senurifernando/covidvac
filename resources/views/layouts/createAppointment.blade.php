@@ -14,22 +14,22 @@
 <body class="bg-gray-400">
     <div class="flex justify-center ">
         <div class="w-3/12 bg-white p-6 rounded-lg m-5 shadow-2xl">
-            <form>
+            <form action="{{ route('createAppointment') }}" method="POST">
                 <h2 class="text-4xl font-normal leading-normal mt-0 mb-2 text-pink-800">Create Appointment</h2>
                 <div class=" md:flex md:items-center mb-6">
                     <label class=" px-6 uppercase font-semibold text-sm">Date :</label>
-                    <input type="date" class="bg-gray-300 rounded-lg">
+                    <input type="date" class="bg-gray-300 rounded-lg" name="date">
                 </div>
                 <div class="md:flex md:items-center mb-6">
                     <label class="  px-6 uppercase font-semibold text-sm">Time :</label>
-                    <input type="time" class="bg-gray-300 rounded-lg">
+                    <input type="time" class="bg-gray-300 rounded-lg" name="time">
                 </div>
                 <div class="md:flex md:items-center mb-6">
                     <label class=" px-6 uppercase font-semibold text-sm">Location :</label>
-                    <input type="text" class="bg-gray-300 rounded-lg">
+                    <input type="text" class="bg-gray-300 rounded-lg" name="location">
                 </div>
                 <div class="mb-6 px-6">
-                    <button type="submit"
+                    <button
                         class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full">Submit</button>
                 </div>
             </form>

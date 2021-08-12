@@ -50,3 +50,4 @@ Route::post('/adminregister', [RegisterController::class, 'createAdmin']);
 
 Route::get('/createAppointment', [AdminController::class, 'createAppointment'])->name('createAppointment');
 Route::get('/deleteRecord/{id}', [AdminController::class, 'deleteRecord']);
+Route::post('/createAppointment', [AdminController::class, 'sendAppointment']);

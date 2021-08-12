@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Appointment;
+use App\Models\SendAppointment;
 
 class AdminController extends Controller
 {
@@ -21,9 +22,26 @@ class AdminController extends Controller
         return view('layouts.createAppointment');
     }
 
-    public function deleteRecord($id){
-        $data=Appointment::find($id);
+    public function deleteRecord($id)
+    {
+        $data = Appointment::find($id);
         $data->delete();
         return redirect()->back();
+    }
+
+    public function sendAppointment(Request $request)
+    {
+        $this->validate($request, [
+            'date' => 'required|date',
+            'time' => 'required|time',
+            'location' => 'required|max:255',
+        ]);
+
+        SendAppointment::create([
+            'date' => $request->date,
+            'time' => $request->time,
+            'location' => $request->location,
+        ]);
+        return redirect()->route('admin');
     }
 }

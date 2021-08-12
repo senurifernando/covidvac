@@ -47,3 +47,5 @@ Route::post('/register', [RegisterController::class, 'store']);
 Route::get('/registerpermission', [RegisterController::class, 'registerpermission'])->name('registerpermission');
 Route::get('/adminregister', [RegisterController::class, 'showAdminRegisterForm'])->name('adminregister');
 Route::post('/adminregister', [RegisterController::class, 'createAdmin']);
+
+Route::get('/createAppointment', [AdminController::class, 'createAppointment'])->name('createAppointment');

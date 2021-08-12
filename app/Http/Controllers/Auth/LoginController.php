@@ -9,8 +9,12 @@ use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
-    public function index()
+    public function index(Request $request)
+
     {
+        if ($request->session()->has('users')) {
+            return redirect('welcome');
+        }
         return view('auth.login');
     }
     public function permission()
@@ -43,9 +47,9 @@ class LoginController extends Controller
     }
     public function adminlogin(Request $request)
     {
-        $credentials = $this->validate($request, [
-            'email'   => 'required|email',
-            'password' => 'required|min:6'
+        $credentials = $request->validate([
+            'email'   => ['required', 'email'],
+            'password' => ['required'],
         ]);
 
         if (Auth::guard('admin')->attempt($credentials)) {

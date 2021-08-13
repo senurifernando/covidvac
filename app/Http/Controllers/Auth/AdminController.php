@@ -29,6 +29,7 @@ class AdminController extends Controller
         return redirect()->back();
     }
 
+
     public function sendAppointment(Request $request)
     {
         $this->validate($request, [
@@ -43,5 +44,19 @@ class AdminController extends Controller
             'location' => $request->location,
         ]);
         return redirect()->route('admin');
+    }
+    public function list()
+    {
+        $data = SendAppointment::join('appointments', 'appointments.id', '=', 'send_appointments.id')
+            ->get([
+                'appointments.name', 'appointments.NIC', 'appointments.province',
+                'appointments.district', 'appointments.phone', 'appointments.email', 'appointments.id', 'send_appointments.id'
+            ]);
+        return view('layouts.admin', compact('data'));
+    }
+    public function showData($id)
+    {
+
+        return SendAppointment::find($id);
     }
 }

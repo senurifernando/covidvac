@@ -10,6 +10,7 @@ class SendAppointment extends Model
 {
     use HasFactory, Notifiable;
     //protected $guard = 'admin';
+    protected $table = 'send_appointments';
 
     protected $fillable = [
 

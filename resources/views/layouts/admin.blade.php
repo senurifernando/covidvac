@@ -54,75 +54,82 @@
                     @foreach ($list as $item)
 
 
-                    <tr>
-                        <td>{{ $item->name }}</td>
-                        <td>{{ $item->NIC }}</td>
-                        <td>{{ $item->province }}</td>
-                        <td>{{ $item->district }}</td>
-                        <td>{{ $item->phone }}</td>
-                        <td>{{ $item->email }}</td>
-                        <td>
-                            <div>
-                                <!-- date, time and location is being given by the following form -->
-                                <button
-                                    class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full">
-                                    <a href="{{ route('createAppointment') }}"> Create appointment</a>
-                                </button>
+                        <tr>
+                            <td>{{ $item->name }}</td>
+                            <td>{{ $item->NIC }}</td>
+                            <td>{{ $item->province }}</td>
+                            <td>{{ $item->district }}</td>
+                            <td>{{ $item->phone }}</td>
+                            <td>{{ $item->email }}</td>
+                            <td>
+                                <div>
+                                    <!-- date, time and location is being given by the following form -->
+                                    <button
+                                        class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full">
+                                        <a href="{{ route('createAppointment') }}"> Create appointment</a>
+                                    </button>
 
-                                <button
-                                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
-                                    Edit
-                                </button>
-                                <!-- <button class="btn btn-success btn-sm rounded-0" type="button"
+                                    <!-- <button class="btn btn-success btn-sm rounded-0" type="button"
                                             data-toggle="tooltip" data-placement="top" title="Edit"><i
                                                 class="fa fa-edit"></i></button>-->
 
 
 
-                                <body x-data="{showDeleteModal:false}" x-bind:class="{ 'model-open': showDeleteModal }"
-                                    style="font-family:Roboto">
+                                    <body x-data="{showDeleteModal:false}"
+                                        x-bind:class="{ 'model-open': showDeleteModal }" style="font-family:Roboto">
 
-                                    <button @click={showDeleteModal=true} type="button"
-                                        class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full">Delete</Button>
+                                        <button @click={showDeleteModal=true} type="button"
+                                            class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full">Delete</Button>
 
-                                    <div x-show="showDeleteModal" tabindex="0"
-                                        class="z-40 overflow-auto left-0 top-0 bottom-0 right-0 w-full h-full fixed">
-                                        <div @click.away="showDeleteModal = false"
-                                            class="z-50 relative p-3 mx-auto my-0 max-w-full" style="width: 500px;">
-                                            <div
-                                                class="bg-white rounded shadow-lg border flex flex-col overflow-hidden px-10 py-10">
-                                                <div class="text-center">
-                                                    <span
-                                                        class="material-icons border-4 rounded-full p-4 text-red-500 font-bold border-red-500 text-4xl">
-                                                        close
-                                                    </span>
-                                                </div>
-                                                <div class="text-center py-6 text-2xl text-gray-700">Are you sure ?
-                                                </div>
-                                                <div class="text-center font-light text-gray-700 mb-8">
-                                                    Do you really want to delete these records? This process cannot be
-                                                    undone.
-                                                </div>
-                                                <div class="flex justify-center">
-                                                    <button @click={showDeleteModal=false}
-                                                        class="bg-gray-300 text-gray-900 rounded hover:bg-gray-200 px-6 py-2 focus:outline-none mx-1">Cancel</button>
-                                                    <a href="/deleteRecord/{{$item->id}}"
-                                                        class="bg-red-500 text-gray-200 rounded hover:bg-red-400 px-6 py-2 focus:outline-none mx-1">Delete</a>
+                                        <div x-show="showDeleteModal" tabindex="0"
+                                            class="z-40 overflow-auto left-0 top-0 bottom-0 right-0 w-full h-full fixed">
+                                            <div @click.away="showDeleteModal = false"
+                                                class="z-50 relative p-3 mx-auto my-0 max-w-full" style="width: 500px;">
+                                                <div
+                                                    class="bg-white rounded shadow-lg border flex flex-col overflow-hidden px-10 py-10">
+                                                    <div class="text-center">
+                                                        <span
+                                                            class="material-icons border-4 rounded-full p-4 text-red-500 font-bold border-red-500 text-4xl">
+                                                            close
+                                                        </span>
+                                                    </div>
+                                                    <div class="text-center py-6 text-2xl text-gray-700">Are you sure ?
+                                                    </div>
+                                                    <div class="text-center font-light text-gray-700 mb-8">
+                                                        Do you really want to delete these records? This process cannot
+                                                        be
+                                                        undone.
+                                                    </div>
+                                                    <div class="flex justify-center">
+                                                        <button @click={showDeleteModal=false}
+                                                            class="bg-gray-300 text-gray-900 rounded hover:bg-gray-200 px-6 py-2 focus:outline-none mx-1">Cancel</button>
+                                                        <a href="/deleteRecord/{{ $item->id }}"
+                                                            class="bg-red-500 text-gray-200 rounded hover:bg-red-400 px-6 py-2 focus:outline-none mx-1">Delete</a>
+                                                    </div>
                                                 </div>
                                             </div>
+                                            <div
+                                                class="z-40 overflow-auto left-0 top-0 bottom-0 right-0 w-full h-full fixed bg-black opacity-50">
+                                            </div>
                                         </div>
-                                        <div
-                                            class="z-40 overflow-auto left-0 top-0 bottom-0 right-0 w-full h-full fixed bg-black opacity-50">
-                                        </div>
-                                    </div>
-                                </body>
-                                <!-- <button class="btn btn-danger btn-sm rounded-0" type="button"
+                                    </body>
+                                    <!-- <button class="btn btn-danger btn-sm rounded-0" type="button"
                                             data-toggle="tooltip" data-placement="top" title="Delete"><i
                                                 class="fa fa-trash"></i></button>-->
 
-                            </div>
-                        </td>
-                    </tr>
+
+
+
+
+                                    <!-- <button
+                                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+                                         <a href Edit
+                                    </button>-->
+
+
+                                </div>
+                            </td>
+                        </tr>
                     @endforeach
                 </tbody>
             </table>

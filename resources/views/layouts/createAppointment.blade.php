@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <title>COVID 19 VACCINATION RESERVATION - createAppointment</title>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
@@ -12,6 +13,7 @@
 
 
 <body class="bg-gray-400">
+
     <div class="flex justify-center ">
         <div class="w-3/12 bg-white p-6 rounded-lg m-5 shadow-2xl">
             <form action="{{ route('createAppointment') }}" method="POST">

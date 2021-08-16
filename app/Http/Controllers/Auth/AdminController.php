@@ -52,6 +52,7 @@ class AdminController extends Controller
             'time' => $request->time,
             'location' => $request->location,
         ]);
+
         return redirect()->route('admin');
     }
     public function list()

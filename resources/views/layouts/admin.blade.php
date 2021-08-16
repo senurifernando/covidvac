@@ -2,11 +2,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <title>COVID 19 VACCINATION RESERVATION</title>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
 
 <body class="bg-gray-200">
+
     <div class="relative w-full flex flex-col h-screen overflow-y-hidden">
         <!-- Desktop Header -->
         <header class="w-full items-center bg-white py-2 px-6 hidden sm:flex">

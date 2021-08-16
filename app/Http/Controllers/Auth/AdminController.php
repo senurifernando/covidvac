@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Appointment;
 use App\Models\SendAppointment;
+use App\Models\User;
 
 class AdminController extends Controller
 {
@@ -16,6 +17,14 @@ class AdminController extends Controller
             'list' => DB::table('appointments')->get()
         );
         return view('layouts.admin', $data);
+    }
+    public function retrieveUser($id)
+    {
+        $data = array(
+            'users' => DB::table('users')->get()
+
+        );
+        return view('layouts.appointmentForm', compact('data'));
     }
     public function createAppointment()
     {

@@ -4,6 +4,9 @@
 
     <!-- Gallery -->
 
+
+
+
     <div>
 
         <div class=" grid grid-rows-2 grid-flow-col gap-8 p-7">
@@ -64,4 +67,5 @@
 
         </div>
     </div>
+
 @endsection

@@ -22,13 +22,13 @@ class RegisterController extends Controller
     {
         $this->validate($request, [
             'name' => 'required|max:255',
-            'NIC' => 'required |max:255',
+            'NIC' => 'required |max:10',
             'address' => 'required|max:255',
-            'email' => 'required|email |max:255',
+            'email' => 'required|email|unique:users,email|max:255',
             'password' => 'required|confirmed',
         ]);
 
-        User::create([
+        $user = User::create([
 
             'name' => $request->name,
             'NIC' => $request->NIC,
@@ -39,7 +39,11 @@ class RegisterController extends Controller
         // auth()->attempt($request->only('email', 'password'));
         //$user->attachRole('user');
         //return ($user)->route('login');
-        return redirect()->route('login');
+        if ($user) {
+            return redirect()->route('login')->with('success', 'You have Registered Successfully');
+        } else {
+            return back()->with('fail', 'Something went Wrong');
+        }
     }
     public function __construct()
     {

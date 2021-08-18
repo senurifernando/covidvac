@@ -12,7 +12,7 @@
 
     <title>COVID 19 VACCINATION RESERVATION - createAppointment</title>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <link href="https://code.jquery.com/ui/1.13.0-alpha.1/themes/smoothness/jquery-ui.css">
+    <link href="https://code.jquery.com/ui/1.13.0-alpha.1/themes/smoothness/jquery-ui.css" rel="stylesheet">
 
     <script>
         $(document).ready(function() {

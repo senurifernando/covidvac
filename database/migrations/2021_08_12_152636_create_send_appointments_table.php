@@ -16,7 +16,7 @@ class CreateSendAppointmentsTable extends Migration
         Schema::create('send_appointments', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->date('date'); //admin
+            $table->string('date'); //admin
             $table->time('time'); //admin
             $table->string('location');
             $table->rememberToken();

@@ -4,7 +4,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <title>COVID 19 VACCINATION RESERVATION</title>
+
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+
+
 </head>
 
 <body class="bg-gray-200">
@@ -66,7 +69,7 @@
                             <td>
                                 <div>
                                     <!-- date, time and location is being given by the following form -->
-                                    <button
+                                    <button id="create"
                                         class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full">
                                         <a href="{{ route('createAppointment') }}"> Create appointment</a>
                                     </button>

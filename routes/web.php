@@ -35,8 +35,15 @@ Route::get('/admin', [AdminController::class, 'index'])->name('admin');
 Route::get('/vaccines', [DashboardController::class, 'vaccines'])->name('vaccines');
 Route::get('/takeAppointment', [DashboardController::class, 'takeAppointment'])->name('takeAppointment');
 
+// Route::get('/allergies', function () {
+//     return view('layouts/allergies');
+// });
+
 Route::get('/appointmentForm', [AppointmentController::class, 'showAppointement'])->name('appointmentForm');
 Route::post('/appointmentForm', [AppointmentController::class, 'store']);
+
+Route::get('/allergies', [AppointmentController::class, 'showallergies'])->name('allergies');
+
 
 Route::get('/guidelines', [DashboardController::class, 'guidelines'])->name('guidelines');
 

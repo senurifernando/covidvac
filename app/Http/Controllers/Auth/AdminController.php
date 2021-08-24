@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Appointment;
 use App\Models\SendAppointment;
+
 use App\Models\User;
 
 class AdminController extends Controller
@@ -45,16 +46,19 @@ class AdminController extends Controller
             'date' => 'required',
             'time' => 'required',
             'location' => 'required|max:255',
+            // 'AppointmentID' => 'unique:appointments,id'
         ]);
 
         SendAppointment::create([
             'date' => $request->date,
             'time' => $request->time,
             'location' => $request->location,
+            //'AppointmentID' => $request->AppointmentID,
         ]);
 
         return redirect()->route('admin');
     }
+
     public function list()
     {
         $data = SendAppointment::join('appointments', 'appointments.id', '=', 'send_appointments.id')

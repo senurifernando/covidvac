@@ -60,7 +60,7 @@ class RegisterController extends Controller
     {
         $this->validate($request, [
             'name' => 'required|max:255',
-            'WorkID' => 'required |max:255',
+            'WorkID' => 'required|unique:admins,WorkID|max:10',
             // 'address' => 'required|max:255',
             'email' => 'required|email |max:255',
             'password' => 'required|confirmed',

@@ -20,6 +20,8 @@ class CreateSendAppointmentsTable extends Migration
             $table->time('time'); //admin
             $table->string('location');
             $table->rememberToken();
+            /*  $table->unsignedBigInteger('AppointmentID');
+            $table->foreign('AppointmentID')->references('id')->on('appointments');*/
         });
     }
 

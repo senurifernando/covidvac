@@ -11,7 +11,7 @@ use Illuminate\Contracts\Auth\CanResetPassword;
 
 class Admin extends Authenticatable
 {
-    use HasFactory, Notifiable, CanResetPassword;
+    use HasFactory, Notifiable;
 
 
     protected $guard = 'admin';

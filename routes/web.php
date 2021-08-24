@@ -44,7 +44,7 @@ Route::get('/appointmentForm', [AppointmentController::class, 'showAppointement'
 Route::post('/appointmentForm', [AppointmentController::class, 'store']);
 
 Route::get('/allergies', [AppointmentController::class, 'showallergies'])->name('allergies');
-
+Route::post('/allergies', [AppointmentController::class, 'storeAllergies']);
 
 Route::get('/guidelines', [DashboardController::class, 'guidelines'])->name('guidelines');
 

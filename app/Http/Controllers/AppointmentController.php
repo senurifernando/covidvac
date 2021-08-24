@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\allergies;
 use App\Models\Appointment;
 use Illuminate\Http\Request;
 use phpDocumentor\Reflection\Location;
@@ -55,7 +56,14 @@ class AppointmentController extends Controller
     {
         return view('layouts.allergies');
     }
-    public function storeAllergies()
+    public function storeAllergies(Request $request)
     {
+        Allergies::create([
+            'name' => $request->name,
+            'NIC' => $request->NIC,
+            'allergies' => $request->allergies,
+            'textarea' => $request->textarea,
+        ]);
+        return redirect()->route('appointmentForm');
     }
 }

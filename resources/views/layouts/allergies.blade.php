@@ -23,8 +23,8 @@
                     <span class="ml-2">No</span>
                 </div>
                 <div class="mb-4">
-                    <textarea name="textarea" id="textarea" placeholder="Mention if you have any Allergies"
-                        class="bg-gray-100 border-2 w-full p-4 rounded-lg"></textarea>
+                    <input type=text name="textarea" id="textarea" placeholder="Mention if you have any Allergies"
+                        class="bg-gray-100 border-2 w-full p-4 rounded-lg">
                 </div>
                 <div>
                     <button type="submit"

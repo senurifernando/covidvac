@@ -21,7 +21,7 @@ class AppointmentController extends Controller
     {
         $this->validate($request, [
             'name' => 'required|max:255',
-            'NIC' => 'required|max:255',
+            'NIC' => 'required|max:10 |unique:appointments,NIC',
             'province' => 'required|max:255',
             'district' => 'required|max:255',
             'injection_name' => 'required|max:255',
@@ -30,7 +30,7 @@ class AppointmentController extends Controller
             //'location' => 'required|max:255',
             'dosenum' => 'required|max:255',
             'phone' => 'required|max:10',
-            'email' => 'required|email |max:255',
+            'email' => 'required|email|max:255',
 
         ]);
 

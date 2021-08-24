@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\Auth\AdminController;
 use App\Http\Controllers\AppointmentController;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Password;
 
 
 /*
@@ -53,3 +55,20 @@ Route::get('/deleteRecord/{id}', [AdminController::class, 'deleteRecord']);
 Route::post('/createAppointment', [AdminController::class, 'sendAppointment']);
 //Route::get('/admin', [AdminController::class, 'list'])->name('admin');
 //Route::get('/edit/{id}', [AdminController::class, 'showData']);
+
+
+//Password reset
+Route::get('/forgot-password', function () {
+    return view('auth.forgotpassword');
+})->middleware('guest')->name('password.request');
+Route::post('/forgot-password', function (Request $request) {
+    $request->validate(['email' => 'required|email']);
+
+    $status = Password::sendResetLink(
+        $request->only('email')
+    );
+
+    return $status === Password::RESET_LINK_SENT
+        ? back()->with(['status' => __($status)])
+        : back()->withErrors(['email' => __($status)]);
+})->middleware('guest')->name('password.email');

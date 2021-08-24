@@ -17,6 +17,7 @@ class SendAppointment extends Model
         'date',
         'time',
         'location',
+        'patientNIC',
     ];
 
     protected $hidden = [

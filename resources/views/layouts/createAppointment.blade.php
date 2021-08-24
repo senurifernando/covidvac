@@ -52,6 +52,11 @@
                     <label class=" px-6 uppercase font-semibold text-sm">Location :</label>
                     <input type="text" class="bg-gray-300 rounded-lg" name="location">
                 </div>
+                <div class="md:flex md:items-center mb-6">
+                    <label class=" px-6 uppercase font-semibold text-sm">Patient NIC:</label>
+                    <input type="text" class="bg-gray-300 rounded-lg" name="patientNIC">
+
+                </div>
                 <div class="mb-6 px-6">
                     <button
                         class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full">Submit</button>

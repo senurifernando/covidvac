@@ -19,6 +19,12 @@ class AdminController extends Controller
         );
         return view('layouts.admin', $data);
     }
+    /*public function index1($id)
+    {
+        $data = Appointment::find($id);
+        $data->show('id');
+        //return redirect()->back();
+    }*/
     public function retrieveUser($id)
     {
         $data = array(
@@ -46,14 +52,14 @@ class AdminController extends Controller
             'date' => 'required',
             'time' => 'required',
             'location' => 'required|max:255',
-            // 'AppointmentID' => 'unique:appointments,id'
+            'patientNIC' => 'required'
         ]);
 
         SendAppointment::create([
             'date' => $request->date,
             'time' => $request->time,
             'location' => $request->location,
-            //'AppointmentID' => $request->AppointmentID,
+            'patientNIC' => $request->patientNIC,
         ]);
 
         return redirect()->route('admin');
@@ -66,7 +72,7 @@ class AdminController extends Controller
                 'appointments.name', 'appointments.NIC', 'appointments.province',
                 'appointments.district', 'appointments.phone', 'appointments.email', 'appointments.id', 'send_appointments.id'
             ]);
-        return view('layouts.admin', compact('data'));
+        return view('layouts.receivedAppointment', compact('data'));
     }
     public function showData($id)
     {

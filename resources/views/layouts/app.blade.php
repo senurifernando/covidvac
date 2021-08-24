@@ -29,6 +29,10 @@
             @auth
                 <li>
                     <a href="{{ route('takeAppointment') }}" class="p-3">Take Appointment</a>
+
+                </li>
+                <li>
+                    <a href="#" class="p-3">Received Appointment</a>
                 </li>
             @endauth
         </ul>

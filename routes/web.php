@@ -32,6 +32,7 @@ use Illuminate\Auth\Events\PasswordReset;
 
 Route::get('/', [DashboardController::class, 'index'])->name('welcome');
 Route::get('/admin', [AdminController::class, 'index'])->name('admin');
+//Route::get('/admin', [AdminController::class, 'index1']);
 Route::get('/vaccines', [DashboardController::class, 'vaccines'])->name('vaccines');
 Route::get('/takeAppointment', [DashboardController::class, 'takeAppointment'])->name('takeAppointment');
 

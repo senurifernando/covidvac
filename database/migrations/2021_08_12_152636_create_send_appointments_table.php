@@ -19,8 +19,9 @@ class CreateSendAppointmentsTable extends Migration
             $table->string('date'); //admin
             $table->time('time'); //admin
             $table->string('location');
+            $table->string('patientNIC');
             $table->rememberToken();
-            /*  $table->unsignedBigInteger('AppointmentID');
+            /* $table->unsignedBigInteger('AppointmentID');
             $table->foreign('AppointmentID')->references('id')->on('appointments');*/
         });
     }

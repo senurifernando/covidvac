@@ -66,4 +66,11 @@ class AppointmentController extends Controller
         ]);
         return redirect()->route('appointmentForm');
     }
+    public function index()
+    {
+        $data = array(
+            'allergies' => DB::table('allergies')->get()
+        );
+        return view('layouts.reviewAllergies', $data);
+    }
 }

@@ -51,8 +51,11 @@ class AppointmentController extends Controller
         return redirect()->route('welcome');
     }
 
-    public function showAllergies(){
+    public function showAllergies()
+    {
         return view('layouts.allergies');
     }
-    
+    public function storeAllergies()
+    {
+    }
 }

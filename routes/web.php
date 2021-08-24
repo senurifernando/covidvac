@@ -36,7 +36,7 @@ Route::get('/admin', [AdminController::class, 'index'])->name('admin');
 Route::get('/vaccines', [DashboardController::class, 'vaccines'])->name('vaccines');
 Route::get('/takeAppointment', [DashboardController::class, 'takeAppointment'])->name('takeAppointment');
 
-// Route::get('/allergies', function () {
+//Route::get('/allergies', function () {
 //     return view('layouts/allergies');
 // });
 

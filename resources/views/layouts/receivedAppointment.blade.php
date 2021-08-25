@@ -1,7 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="m-4">
+
+<div>
     <table class="min-w-full bg-white" id="example">
         <thead class="bg-gray-800 text-white">
             <tr>

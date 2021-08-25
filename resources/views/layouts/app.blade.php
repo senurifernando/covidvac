@@ -32,7 +32,7 @@
 
                 </li>
                 <li>
-                    <a href="#" class="p-3">Received Appointment</a>
+                    <a href="{{ route('receivedAppointment') }}" class="p-3">Received Appointment</a>
                 </li>
             @endauth
         </ul>

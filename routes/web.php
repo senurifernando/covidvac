@@ -35,6 +35,7 @@ Route::get('/admin', [AdminController::class, 'index'])->name('admin');
 //Route::get('/admin', [AdminController::class, 'index1']);
 Route::get('/vaccines', [DashboardController::class, 'vaccines'])->name('vaccines');
 Route::get('/takeAppointment', [DashboardController::class, 'takeAppointment'])->name('takeAppointment');
+Route::get('/receivedAppointment', [DashboardController::class, 'show'])->name('receivedAppointment');
 
 //Route::get('/allergies', function () {
 //     return view('layouts/allergies');

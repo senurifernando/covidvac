@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\SendAppointment;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -25,5 +27,13 @@ class DashboardController extends Controller
     public function takeAppointment()
     {
         return view('layouts.takeAppointment');
+    }
+
+    public function show()
+    {
+        $data = array(
+            'sendApp' => DB::table('send_appointments')->get()
+        );
+        return view('layouts.receivedAppointment', $data);
     }
 }

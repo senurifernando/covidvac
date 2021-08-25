@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\allergies;
 use App\Models\Appointment;
+use App\Models\SendAppointment;
 use Illuminate\Http\Request;
 use phpDocumentor\Reflection\Location;
 use Illuminate\Support\Facades\DB;
@@ -72,5 +73,9 @@ class AppointmentController extends Controller
             'allergies' => DB::table('allergies')->get()
         );
         return view('layouts.reviewAllergies', $data);
+    }
+    public function receivedAppointment()
+    {
+        collect(DB::select('select * from send_appointments where NIC=$NIC',))->first();
     }
 }

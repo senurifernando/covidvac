@@ -16,11 +16,11 @@ This Web application helps to automate the manual appointment system which is cu
 - Sending Appiontment
 
 ## Contributors of this project
-_Nimna Yasasni_
-_Malki Madushani_
-_Sanchila Sathsarani_
-_Ivoshani Senevirathne_
-_Senuri Fernando_
+- _Nimna Yasasni_
+- _Malki Madushani_
+- _Sanchila Sathsarani_
+- _Ivoshani Senevirathne_
+- _Senuri Fernando_
 
 ## About Laravel
 

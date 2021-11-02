@@ -7,6 +7,21 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+## COVID-19 vaccination appointment system
+This Web application helps to automate the manual appointment system which is currently in operation.
+
+## Functions included
+- Registration
+- Request Appointment
+- Sending Appiontment
+
+## Contributors of this project
+_Nimna Yasasni_
+_Malki Madushani_
+_Sanchila Sathsarani_
+_Ivoshani Senevirathne_
+_Senuri Fernando_
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
